@@ -1,0 +1,27 @@
+echo -e "package 'apache2'" > webserver.rb
+
+
+
+echo -e "package 'apache2'
+
+\nservice 'apache2' do
+  \naction [:start, :enable]
+\nend" > webserver.rb
+
+
+
+
+
+echo -e "package 'apache2'
+
+\nservice 'apache2' do
+  \naction [:start, :enable]
+\nend
+
+\nfile '/var/www/html/index.html' do
+  \ncontent '<html>
+  \n<body>
+    \n<h1>hello world</h1>
+  \n</body>
+\n</html>'
+\nend" > webserver.rb

@@ -1,0 +1,10 @@
+FROM codenvy/jdk7_vnc
+RUN sudo apt-get update && sudo apt-get -y install curl
+RUN curl -L https://www.opscode.com/chef/install.sh | sudo bash
+RUN curl -O https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chefdk-0.2.0-2.el6.x86_64.rpm
+RUN sudo apt-get -y install rpm
+RUN sudo rpm -Uvh chefdk-0.2.0-2.el6.x86_64.rpm --nodeps
+RUN mkdir /home/user/chef-repo
+ADD $app$/ /home/user/chef-repo
+RUN sudo apt-get -y install mc
+# RUN chef-apply hello.rb
