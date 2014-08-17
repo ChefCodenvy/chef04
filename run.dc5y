@@ -8,3 +8,4 @@ RUN mkdir /home/user/chef-repo
 ADD $app$/ /home/user/chef-repo
 RUN sudo apt-get -y install mc
 # RUN chef-apply hello.rb
+EXPOSE 6080
