@@ -6,6 +6,9 @@ RUN sudo apt-get -y install rpm
 RUN sudo rpm -Uvh chefdk-0.2.0-2.el6.x86_64.rpm --nodeps
 RUN mkdir /home/user/chef-repo
 ADD $app$/ /home/user/chef-repo
-RUN sudo apt-get -y install mc
+RUN mkdir /home/user/cookbooks
+ADD $app$/ /home/user/cookbooks
+RUN sudo apt-get -y install mc vim tree apache
+RUN cd /home/user/cookbooks
 # RUN chef-apply hello.rb
 EXPOSE 6080
