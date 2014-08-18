@@ -1,3 +1,25 @@
+cd /home/user/chef-repo/cookbooks
+
+chef generate cookbook webserver
+
+tree
+
+chef generate template webserver index.html
+
+cat /home/user/chef-repo/index.html.erb > /home/user/chef-repo/cookbooks/webserver/templates/default/index.html.erb
+
+cat /home/user/chef-repo/default.rb > /home/user/chef-repo/cookbooks/webserver/recipes/default.rb
+
+sudo chef-client --local-mode --runlist webserver
+
+curl localhost
+
+
+
+
+
+
+
 echo -e "package 'apache2'" > webserver.rb
 
 
@@ -7,8 +29,6 @@ echo -e "package 'apache2'
 \nservice 'apache2' do
   \naction [:start, :enable]
 \nend" > webserver.rb
-
-
 
 
 

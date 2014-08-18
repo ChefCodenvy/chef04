@@ -1,6 +1,6 @@
-package 'httpd'
+package 'apache2'
 
-service 'httpd' do
+service 'apache2' do
   action [:start, :enable]
 end
 
