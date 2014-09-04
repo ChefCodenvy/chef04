@@ -1,3 +1,6 @@
+# Use the following commands to copy and paste into the terminal window.
+# Steps taken from http://learn.getchef.com/rhel/make-your-recipe-more-manageable/
+
 cd /home/user/chef-repo/cookbooks
 
 chef generate cookbook webserver
