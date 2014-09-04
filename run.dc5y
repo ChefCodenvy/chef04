@@ -8,7 +8,7 @@ RUN mkdir /home/user/chef-repo
 ADD $app$/ /home/user/chef-repo
 RUN mkdir /home/user/chef-repo/cookbooks
 ADD $app$/ /home/user/chef-repo/cookbooks
-RUN sudo apt-get -y install mc vim tree apache2
+RUN sudo apt-get update && sudo apt-get -y install mc vim tree apache2
 # RUN cd /home/user/chef-repo/cookbooks
 # RUN chef-apply hello.rb
 EXPOSE 6080
