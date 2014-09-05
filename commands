@@ -15,9 +15,11 @@ cat /home/user/chef-repo/default.rb > /home/user/chef-repo/cookbooks/webserver/r
 
 sudo chef-client --local-mode --runlist webserver
 
-curl localhost
+curl localhost #Or click on application URL to open a new tab
 
 
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
 

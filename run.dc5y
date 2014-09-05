@@ -1,5 +1,5 @@
 FROM codenvy/jdk7_vnc
-RUN sudo apt-get update && sudo apt-get -y install curl
+RUN sudo apt-get update && sudo apt-get -y install curl # mc vim tree apache2
 RUN curl -L https://www.opscode.com/chef/install.sh | sudo bash
 RUN curl -O https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chefdk-0.2.0-2.el6.x86_64.rpm
 RUN sudo apt-get -y install rpm
@@ -11,4 +11,4 @@ ADD $app$/ /home/user/chef-repo/cookbooks
 RUN sudo apt-get update && sudo apt-get -y install mc vim tree apache2
 # RUN cd /home/user/chef-repo/cookbooks
 # RUN chef-apply hello.rb
-EXPOSE 6080
+EXPOSE 6080 80
